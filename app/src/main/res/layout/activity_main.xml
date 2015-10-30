@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputText"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:id="@+id/button"
+        android:layout_below="@+id/inputText"
+        android:layout_alignRight="@+id/inputText"
+        android:layout_alignEnd="@+id/inputText"
+        android:onClick="submit" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hide"
+        android:id="@+id/hideCheckBox"
+        android:layout_below="@+id/inputText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/historyListView"
+        android:layout_below="@+id/storeInfoSpinner"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/storeInfoSpinner"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/hideCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MENU"
+        android:id="@+id/button8"
+        android:layout_below="@+id/inputText"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button"
+        android:onClick="goToDrinkMenu" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/storeInfoSpinner"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/photo"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/storeInfoSpinner"
+        android:layout_alignRight="@+id/storeInfoSpinner"
+        android:layout_alignEnd="@+id/storeInfoSpinner" />
+
+</RelativeLayout>
